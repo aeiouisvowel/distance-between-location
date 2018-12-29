@@ -1,0 +1,29 @@
+.userForm {
+    margin-top: 150px;
+}
+
+.inputData {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 10px 15px;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
+.submitData {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 20px;
+    border-style: none;
+    border: 1px solid black;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
