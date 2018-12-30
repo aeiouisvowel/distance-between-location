@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.post("/calc-distance", (req, res) => {
-    request.get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='+req.body.origins+'&destinations='+req.body.destinations+'&departure_time=now&key='+key, { json: true }, function(err, resp, body) {
+    request.get('https://maps.googleapis.com/maps/api/distancematrix/json?origins='+encodeURIComponent(req.body.origins)+'&destinations='+encodeURIComponent(req.body.destinations)+'&departure_time=now&key='+key, { json: true }, function(err, resp, body) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         if (err) { res.json({ "data": err }); }
         else { res.json({ "data": body }); }
