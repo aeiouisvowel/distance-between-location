@@ -12,7 +12,7 @@ let calculateDistance = () => {
         }
     };
 
-    xhttp.open("POST", "http://localhost:3010/calc-distance", true);
+    xhttp.open("POST", "/calc-distance", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send("origins=" + origins + "&destinations=" + destinations);
 }
